@@ -1,0 +1,57 @@
+(Test 1 & 2 - counts \n as a char)
+
+File Name: JFMAbstract.txt
+Number of characters: 327
+Number of words: 46
+
+File Name: PhysicaDAbstract.txt
+Number of characters: 207
+Number of words: 29
+
+The file named "JFMAbstract.txt" has less lines than the file named "PhysicaDAbstract.txt".File Name: JFMAbstract.txt
+
+Number of characters: 350
+Number of words: 46
+
+File Name: PhysicaDAbstract.txt
+Number of characters: 239
+Number of words: 29
+
+The file named "JFMAbstract.txt" has less lines than the file named "PhysicaDAbstract.txt".
+
+(Test 3 - not counting \n as a char)
+
+File Name: JFMAbstract.txt
+Number of characters: 344
+Number of words: 46
+
+File Name: PhysicaDAbstract.txt
+Number of characters: 230
+Number of words: 29
+
+The file named "JFMAbstract.txt" has less lines than the file named "PhysicaDAbstract.txt".
+
+(Test 4 - not counting \n or ' ' as a char)
+
+File Name: JFMAbstract.txt
+Number of characters: 284
+Number of words: 46
+
+File Name: PhysicaDAbstract.txt
+Number of characters: 181
+Number of words: 29
+
+The file named "JFMAbstract.txt" has less lines than the file named "PhysicaDAbstract.txt".
+
+(Test 5 - including any chars, including all escape chars)
+
+
+File Name: JFMAbstract.txt
+Number of characters: 350
+Number of words: 46
+
+File Name: PhysicaDAbstract.txt
+Number of characters: 239
+Number of words: 29
+
+The file named "JFMAbstract.txt" has less lines than the file named "PhysicaDAbstract.txt".
