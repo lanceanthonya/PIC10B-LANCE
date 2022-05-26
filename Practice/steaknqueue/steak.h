@@ -1,16 +1,20 @@
 
-#ifndef __STACK__
-#define __STACK__
+#ifndef __STEAK__
+#define __STEAK__
 
 #include "LinkedList.h"
-#include "LinkedLitNode.h"
+#include "LinkedListNode.h"
 
-class Stack
+class Steak
 {
-    private:
+public:
+
+    int pop();
+    
+private:
+        
     LinkedList ll;
     
-    public:
-    int pop();
-    int pop();
-}
+};
+
+#endif //__STEAK__
