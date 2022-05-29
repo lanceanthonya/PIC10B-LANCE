@@ -8,5 +8,20 @@
 #ifndef __NODE__
 #define __NODE__
 
+class Node
+{
+public:
+
+    Node (int _val);
+    
+    Node ();
+    
+    Node* left;
+    Node* right;
+    
+private:
+    int val;
+};
+
 
 #endif /* __NODE__ */

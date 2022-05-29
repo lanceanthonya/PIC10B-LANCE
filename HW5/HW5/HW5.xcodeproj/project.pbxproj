@@ -11,6 +11,7 @@
 		4B83B56F2843255E0017B306 /* List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B83B56E2843255E0017B306 /* List.cpp */; };
 		4B83B572284325780017B306 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B83B570284325780017B306 /* Node.cpp */; };
 		4B83B5742843258F0017B306 /* Iterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B83B5732843258F0017B306 /* Iterator.cpp */; };
+		4B83B57C28432D6A0017B306 /* TESTLA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B83B57A28432D6A0017B306 /* TESTLA.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 		4B83B575284325A20017B306 /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		4B83B576284325B00017B306 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		4B83B577284325BD0017B306 /* Iterator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iterator.h; sourceTree = "<group>"; };
+		4B83B57A28432D6A0017B306 /* TESTLA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TESTLA.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				4B83B575284325A20017B306 /* Node.h */,
 				4B83B576284325B00017B306 /* List.h */,
 				4B83B577284325BD0017B306 /* Iterator.h */,
+				4B83B57A28432D6A0017B306 /* TESTLA.cpp */,
 			);
 			path = HW5;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			files = (
 				4B83B572284325780017B306 /* Node.cpp in Sources */,
 				4B83B56D284325440017B306 /* hw5.cpp in Sources */,
+				4B83B57C28432D6A0017B306 /* TESTLA.cpp in Sources */,
 				4B83B56F2843255E0017B306 /* List.cpp in Sources */,
 				4B83B5742843258F0017B306 /* Iterator.cpp in Sources */,
 			);

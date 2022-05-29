@@ -6,3 +6,15 @@
 */
 
 #include "Node.h"
+
+Node::Node (int _val):
+    val (_val),
+    left(nullptr),
+    right (nullptr)
+{}
+
+Node::Node():
+    val (0),
+    left(nullptr),
+    right (nullptr)
+{}
