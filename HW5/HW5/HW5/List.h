@@ -10,7 +10,7 @@
 
 #include "Node.h"
 
-class LinkedList
+class List
 {
 public:
     
