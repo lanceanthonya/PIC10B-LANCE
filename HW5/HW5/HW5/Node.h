@@ -15,8 +15,7 @@ class Node
 {
 public:
     
-    // Grants friendship to the List object, so that it can alter the left and right values
-    friend class List;
+
     
     /**
      Constructor of a Node object that stores the value.
@@ -45,7 +44,9 @@ private:
     Node* left;
     Node* right;
     
-    
+    // Grants friendship to the List and Iterator objects, so that they can alter/read the left and right values
+    friend class List;
+    friend class Iterator;
 };
 
 

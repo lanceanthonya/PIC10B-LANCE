@@ -52,11 +52,18 @@ public:
     void print() const;
     
     void print_helper(const Node* current_node) const;
+    
+    size_t get_size() const;
 
 private:
     
     Node* Head;
     Node* Tail;
+    
+    size_t size;
+    
+    friend class Iterator;
+    
 };
 
 

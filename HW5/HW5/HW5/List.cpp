@@ -11,8 +11,14 @@
 
 List::List():
     Head(nullptr),
-    Tail(nullptr)
+    Tail(nullptr),
+    size(0)
 {}
+
+size_t List::get_size() const
+{
+    return size;
+}
 
 void List::reverse()
 {
@@ -32,6 +38,7 @@ void List::push_front(Node* new_node)
         new_node-> right = Head;
         Head = new_node;
     }
+    ++size;
 }
 
 void List::sort()
@@ -49,12 +56,12 @@ void List::print() const
 
 void List::print_helper(const Node* current_node) const
 {
-    if (current_node->right != nullptr) // ends if the current_node is a nullptr, meaning that it's the tail
+    if (current_node->right != nullptr) // calls the function again if the next node exists
     {
         std::cout << current_node->get_val() << ","; // prints the value stored at the current node
         print_helper(current_node->right); // recursively calls the value on the right, starting from the Head
     }
-    else if (current_node-> right == nullptr)
+    else if (current_node-> right == nullptr) // does not call the function again if there is no next node, meaning that the current node is the tail
     {
         std::cout << current_node->get_val();
     }
