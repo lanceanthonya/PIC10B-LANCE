@@ -17,10 +17,10 @@ class List; // forward declaration of List
 class Iterator
 {
 public:
-    Iterator();
-    std::string get() const;  // Use operator* instead
     
-    std::string operator*();
+    Iterator();
+    
+    int operator*() const; // dereferencing the node at the iterator in order to get the value stored
     
     void operator++();
     
@@ -28,13 +28,16 @@ public:
     
     bool operator==(Iterator second) const;
 
+    bool operator!=(Iterator second) const;
 
     
 private:
     
-    friend class List;
     Node* position;
     const List* container;
+    
+    friend class List;
+
 };
 
 
