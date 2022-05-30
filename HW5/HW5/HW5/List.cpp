@@ -49,10 +49,14 @@ void List::print() const
 
 void List::print_helper(const Node* current_node) const
 {
-    if (current_node != nullptr) // ends if the current_node is a nullptr, meaning that it's the tail
+    if (current_node->right != nullptr) // ends if the current_node is a nullptr, meaning that it's the tail
     {
         std::cout << current_node->get_val() << ","; // prints the value stored at the current node
         print_helper(current_node->right); // recursively calls the value on the right, starting from the Head
+    }
+    else if (current_node-> right == nullptr)
+    {
+        std::cout << current_node->get_val();
     }
 }
 

@@ -35,7 +35,12 @@ int main()
     size_t number_of_vals = val_vector.size();
     for (size_t current = number_of_vals-1; 0<=current; --current)
     {
+        
         list_of_ints.push_front( new Node(val_vector[current]) );
+        if (current == 0)
+        {
+            break;
+        }
     }
     
     list_of_ints.print();
