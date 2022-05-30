@@ -18,3 +18,8 @@ Node::Node():
     left(nullptr),
     right (nullptr)
 {}
+
+int Node::get_val() const
+{
+    return val;
+}

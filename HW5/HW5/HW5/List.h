@@ -19,6 +19,13 @@ public:
      Default constructor for a list
      */
     List();
+    
+    /**
+     Destructor for a list
+     */
+    ~List();
+    
+    void List_des_helper(Node* current_node);
 
     /**
      Reverses the order of a list
