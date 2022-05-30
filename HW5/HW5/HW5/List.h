@@ -57,8 +57,8 @@ public:
 
 private:
     
-    Node* Head;
-    Node* Tail;
+    Node* First;
+    Node* Last;
     
     size_t size;
     

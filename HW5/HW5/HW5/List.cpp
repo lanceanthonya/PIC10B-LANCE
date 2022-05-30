@@ -10,8 +10,8 @@
 #include "Node.h"
 
 List::List():
-    Head(nullptr),
-    Tail(nullptr),
+    First(nullptr),
+    Last(nullptr),
     size(0)
 {}
 
@@ -27,16 +27,16 @@ void List::reverse()
 
 void List::push_front(Node* new_node)
 {
-    if (Head==nullptr)
+    if (First==nullptr)
     {
-        Head = new_node;
-        Tail = new_node;
+        First = new_node;
+        Last = new_node;
     }
     else
     {
-        Head->left = new_node;
-        new_node-> right = Head;
-        Head = new_node;
+        First->left = new_node;
+        new_node-> right = First;
+        First = new_node;
     }
     ++size;
 }
@@ -49,7 +49,7 @@ void List::sort()
 void List::print() const
 {
     std::cout<<"(";
-    print_helper(Head); // starts from the Head of the List
+    print_helper(First); // starts from the Head of the List
     std::cout<<")";
 
 }
@@ -69,7 +69,7 @@ void List::print_helper(const Node* current_node) const
 
 List::~List()
 {
-    List_des_helper(Head); // starts destruction from the head of the List
+    List_des_helper(First); // starts destruction from the head of the List
 }
 
 void List::List_des_helper(Node* current_node)
