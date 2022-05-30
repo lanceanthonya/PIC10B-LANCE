@@ -27,12 +27,12 @@ void List::reverse()
 
 void List::push_front(Node* new_node)
 {
-    if (First==nullptr)
+    if (First==nullptr) // if the list is empty
     {
         First = new_node;
         Last = new_node;
     }
-    else
+    else // otherwise, if the List has existing items, meaning the First object exists
     {
         First->left = new_node;
         new_node-> right = First;
@@ -49,7 +49,7 @@ void List::sort()
 void List::print() const
 {
     std::cout<<"(";
-    print_helper(First); // starts from the Head of the List
+    print_helper(First); // starts from the First item of the List
     std::cout<<")";
 
 }
@@ -59,7 +59,7 @@ void List::print_helper(const Node* current_node) const
     if (current_node->right != nullptr) // calls the function again if the next node exists
     {
         std::cout << current_node->get_val() << ","; // prints the value stored at the current node
-        print_helper(current_node->right); // recursively calls the value on the right, starting from the Head
+        print_helper(current_node->right); // recursively calls the value on the right, starting from the First node
     }
     else if (current_node-> right == nullptr) // does not call the function again if there is no next node, meaning that the current node is the tail
     {
@@ -69,7 +69,7 @@ void List::print_helper(const Node* current_node) const
 
 List::~List()
 {
-    List_des_helper(First); // starts destruction from the head of the List
+    List_des_helper(First); // starts destruction from the beginning of the List
 }
 
 void List::List_des_helper(Node* current_node)

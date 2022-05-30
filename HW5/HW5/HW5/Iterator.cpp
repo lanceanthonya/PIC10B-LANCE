@@ -5,9 +5,23 @@
  Date: 05/28/2022
 */
 
-#include "Iterator.h"
+#include "List.h"
+#include "Node.h"
+#include <string>
+
+
 
 class Iterator
 {
+private:
+    Node* position;
+    const List* container;
+    friend class List;
     
+public:
+    Iterator();
+    std::string get() const;  // Use operator* instead
+    void next();         // Use ++ instead
+    void previous(); // Use -- instead
+    bool equals(Iterator b) const; //Use == instead
 };
