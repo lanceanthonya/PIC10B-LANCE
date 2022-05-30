@@ -8,26 +8,50 @@
 #ifndef __LIST__
 #define __LIST__
 
+#include <iostream>
 #include "Node.h"
 
 class List
 {
 public:
     
-    Node* get_head();
-    Node* get_tail();
-    
+    /**
+     Default constructor for a list
+     */
+    List();
+
+    /**
+     Reverses the order of a list
+     */
     void reverse();
     
-    void push_front();
+    //void push_front(int new_val);
     
+    /**
+     Addss a new value to the front of the list, such that it becomes the new Head
+     
+     @param new_node a new node to add to the list
+     */
+    void push_front(Node* new_node);
+    
+    /**
+     Sorts the list in place
+     */
     void sort();
     
+    /**
+     Prints the values of the list starting from the head and ending at the tail
+     */
+    void print() const;
+    
+    void print_helper(const Node* current_node) const;
+
 private:
     
     Node* Head;
     Node* Tail;
 };
+
 
 
 #endif /* __LIST__ */
