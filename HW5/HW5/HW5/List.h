@@ -57,8 +57,8 @@ public:
 
 private:
     
-    Node* First;
-    Node* Last;
+    Node* First; // refers to the "head" of the List
+    Node* Last; // refers to the "tail" of the List
     
     size_t size;
     
