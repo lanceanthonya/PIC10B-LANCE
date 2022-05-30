@@ -9,7 +9,10 @@
 #define __LIST__
 
 #include <iostream>
+#include "Iterator.h"
 #include "Node.h"
+
+class Iterator;
 
 class List
 {
@@ -53,7 +56,16 @@ public:
     
     void print_helper(const Node* current_node) const;
     
+    void insert(Iterator pos, std::string s);
+    
+    Iterator erase(Iterator pos);
+    
+    Iterator begin();
+    
+    Iterator end();
+    
     size_t get_size() const;
+    
 
 private:
     
