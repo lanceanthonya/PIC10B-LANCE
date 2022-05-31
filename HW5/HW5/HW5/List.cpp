@@ -8,6 +8,7 @@
 #include <iostream>
 #include "List.h"
 #include "Node.h"
+#include <cassert>
 
 List::List():
     First(nullptr),
@@ -133,7 +134,33 @@ void List::insert(Iterator pos, int i)
 
 Iterator List::erase(Iterator pos)
 {
-    return pos;
+    assert(pos.position != nullptr);
+    Node* node_to_remove = pos.position;
+    Node* before_ntr = node_to_remove->prev;
+    Node* after_ntr = node_to_remove->next;
+
+
+    if (node_to_remove == First)
+    { 
+        First = after_ntr;
+    }
+    else
+    {
+        before_ntr->next = after_ntr;
+    }    
+    if (node_to_remove == Last)
+    {
+        Last = before_ntr;
+    }
+    else
+    {
+        after_ntr->prev = before_ntr;
+    }
+    delete node_to_remove;
+    Iterator r;
+    r.position = after_ntr;
+    r.container = this;
+    return r;
 }
 
 Iterator List::begin()
