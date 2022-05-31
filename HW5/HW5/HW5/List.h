@@ -56,7 +56,8 @@ public:
     
     void print_helper(const Node* current_node) const;
     
-    void insert(Iterator pos, std::string s);
+    void insert(Iterator pos, int i);
+
     
     Iterator erase(Iterator pos);
     

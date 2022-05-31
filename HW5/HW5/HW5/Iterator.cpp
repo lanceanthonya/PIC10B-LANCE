@@ -8,6 +8,7 @@
 #include "Iterator.h"
 #include "Node.h"
 #include "List.h"
+#include <cassert>
 
 Iterator::Iterator():
     position(nullptr),
@@ -21,18 +22,27 @@ int Iterator::operator*() const
 
 void Iterator::operator++()
 {
+    assert(position!=nullptr);
     position = (position->next);
 }
 
 void Iterator::operator--()
 {
-    position = (position->prev);
+    assert(position != container->First);
+    if (position == NULL) // if the position goes past the tail, sets the position as the tail value of the container
+    {
+        position = container->Last;
+    }
+    else // otherwise, sets position as the prev value of the Node
+    {
+        position = (position->prev);
+    }
 
 }
 
 bool Iterator::operator==(const Iterator& second) const
 {
-    if (this->position == second.position) // checks if the iterator on the left matchews the iterator position on the right
+    if (position == second.position) // checks if the iterator on the left matchews the iterator position on the right
     {
         return true;
     }

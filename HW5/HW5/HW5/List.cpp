@@ -81,6 +81,41 @@ void List::List_des_helper(Node* current_node)
         
         delete current_node; // deletes the node after the node to the next node has been deleted. At the final function call, nodes are deleted starting at the Last node, and ending at the First node
     }
-    // otherwise, if the current_node is nullptr, it has reached the tail and therefore the recursion loop ends
+    // otherwise, if the current_node is nullptr, the tail has been reached and therefore the recursion loop ends
     
 }
+
+void List::insert(Iterator pos, int i)
+{
+    
+    Node* new_node_position = pos.position;
+    Node* before = new_node_position->prev;
+    Node* after = new_node_position->next;
+    
+    Node* new_node = new Node(i);
+    
+    new_node->next = after;
+    new_node->prev = before;
+}
+
+Iterator List::erase(Iterator pos)
+{
+    return pos;
+}
+
+Iterator List::begin()
+{
+    Iterator iter;
+    iter.container = this;
+    iter.position = this->First;
+    return iter;
+}
+
+Iterator List::end()
+{
+    Iterator iter;
+    iter.container = this;
+    iter.position = nullptr;
+    return iter;
+}
+
