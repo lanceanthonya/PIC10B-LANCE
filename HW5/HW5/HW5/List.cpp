@@ -119,7 +119,7 @@ void List::insert(Iterator pos, int i)
         Node* new_node = new Node(i); // creates a new node with empty prev and next value
 
         Node* new_next = pos.position;
-        --pos; // decrements the position to the previous item in the list so that a pointer to it can be created
+        --pos; // decrements the position to the previous item in the list so that a pointer to it can be created 
         Node* new_prev = pos.position;
 
 
@@ -134,31 +134,37 @@ void List::insert(Iterator pos, int i)
 
 Iterator List::erase(Iterator pos)
 {
+    // Creates pointers to the node being removed as well as the nodes right next to it
+
     assert(pos.position != nullptr);
     Node* node_to_remove = pos.position;
     Node* before_ntr = node_to_remove->prev;
     Node* after_ntr = node_to_remove->next;
 
-
-    if (node_to_remove == First)
+    // setting the nodes before and after the removed node to point at one another
+    
+    if (node_to_remove == First) // if the node being removed is the Head/First item, then the new First is set to the value after it
     { 
         First = after_ntr;
     }
-    else
-    {
-        before_ntr->next = after_ntr;
+    else // otherwise, just sets the next value of the node before the removed node to point at the node after the removed node
+    { 
+        before_ntr->next = after_ntr; 
     }    
-    if (node_to_remove == Last)
+
+    if (node_to_remove == Last) // if the node being removed is the Tail/Last item, then the new Last is set to the value before it
     {
         Last = before_ntr;
     }
-    else
+    else // otherwise, just sets the previous value of the node after the removed node to point at the node before the removed node
     {
         after_ntr->prev = before_ntr;
     }
-    delete node_to_remove;
+
+    delete node_to_remove; // deallocates the memory for the removed node
+
     Iterator r;
-    r.position = after_ntr;
+    r.position = after_ntr; // sets the new iterator's position to point at the node after the node that was just removed
     r.container = this;
     return r;
 }

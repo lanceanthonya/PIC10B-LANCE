@@ -65,7 +65,7 @@ int main()
     list_of_ints.insert(pos_to_add_new_val, value); // creates a new node that shifts the current node at that position to becoming the next value, relative to the new node.
     list_of_ints.print();
 
-    cout << "What index to remove a value?: ";
+    cout << "\nWhat index to remove a value?: ";
     cin >> index;
 
     Iterator pos_to_rm_val = list_of_ints.begin();
