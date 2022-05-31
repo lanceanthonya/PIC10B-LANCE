@@ -29,7 +29,7 @@ void Iterator::operator++()
 void Iterator::operator--()
 {
     assert(position != container->First);
-    if (position == NULL) // if the position goes past the tail, sets the position as the tail value of the container
+    if (position == nullptr) // if the position goes past the tail, sets the position as the tail value of the container
     {
         position = container->Last;
     }

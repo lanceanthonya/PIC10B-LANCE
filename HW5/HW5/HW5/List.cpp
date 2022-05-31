@@ -103,15 +103,32 @@ void List::List_des_helper(Node* current_node)
 
 void List::insert(Iterator pos, int i)
 {
-    
-    Node* new_node_position = pos.position;
-    Node* before = new_node_position->prev;
-    Node* after = new_node_position->next;
-    
-    Node* new_node = new Node(i);
-    
-    new_node->next = after;
-    new_node->prev = before;
+    // first create a new node
+
+    if (pos == this->begin())
+    {
+        this->push_front( new Node (i));
+    }
+    else if (pos == this->end())
+    {
+        this->push_back( new Node(i) );
+    }
+    else
+    {
+        Node* new_node = new Node(i); // creates a new node with empty prev and next value
+
+        Node* new_next = pos.position;
+        --pos; // decrements the position to the previous item in the list so that a pointer to it can be created
+        Node* new_prev = pos.position;
+
+
+        new_node->next = new_next;
+        new_next->prev = new_node;
+
+        new_node->prev = new_prev;
+        new_prev->next = new_node;
+    }
+  
 }
 
 Iterator List::erase(Iterator pos)

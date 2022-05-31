@@ -39,8 +39,31 @@ int main()
         list_of_ints.push_back( new Node(val_vector[current]) );
 
     }
-    
+    cout << "The inputted list: ";
+
     list_of_ints.print();
-    
+    cout << "\n";
+
+    // testing iterator for: adding a number to a certain position
+
+    size_t index;
+    int value;
+
+    cout << "What index? ";
+    cin >> index;
+
+    cout << "What value to insert at that index? ";
+    cin >> value; 
+
+    Iterator pos_to_add_new_val = list_of_ints.begin();
+
+    for (size_t cur_index = 0; cur_index< index; ++cur_index)
+    {
+        ++pos_to_add_new_val;
+    }
+
+    list_of_ints.insert(pos_to_add_new_val, value);
+    list_of_ints.print();
+
     return 0;
 }
