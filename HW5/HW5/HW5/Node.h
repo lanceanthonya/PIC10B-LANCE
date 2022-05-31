@@ -15,8 +15,6 @@ class Node
 {
 public:
     
-
-    
     /**
      Constructor of a Node object that stores the value.
      
@@ -36,12 +34,12 @@ public:
      */
     int get_val() const;
     
-    int val;
 
     
 private:
-    
-    
+
+    int val;
+
     Node* prev; // prev refers to the value facing the "head"/start of the linked list
     Node* next; // next refers to the value facing the "tail"/end of the linked list
     
