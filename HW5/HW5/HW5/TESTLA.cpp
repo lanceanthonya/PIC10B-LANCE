@@ -55,25 +55,17 @@ int main()
     cout << "What value to insert at that index? ";
     cin >> value; 
 
-    Iterator pos_to_add_new_val = list_of_ints.begin();
 
-    for (size_t cur_index = 0; cur_index < index; ++cur_index) // increments the Iterator until the index the iterator corresponds to matches the user-inputted index
-    {
-        ++pos_to_add_new_val; // moves the iterator to the Next value
-    }
 
-    list_of_ints.insert(pos_to_add_new_val, value); // creates a new node that shifts the current node at that position to becoming the next value, relative to the new node.
+    list_of_ints.insert(list_of_ints[index], value); // creates a new node that shifts the current node at that position to becoming the next value, relative to the new node.
     list_of_ints.print();
 
     cout << "\nWhat index to remove a value?: ";
     cin >> index;
 
-    Iterator pos_to_rm_val = list_of_ints.begin();
-    for (size_t cur_index = 0; cur_index < index; ++cur_index) // increments the Iterator until the index the iterator corresponds to matches the user-inputted index
-    {
-        ++pos_to_rm_val; // moves the iterator to the Next value
-    }
-    list_of_ints.erase(pos_to_rm_val); // erases the value at the position indicated by the index
+    cout << "Erased value: "<< *(list_of_ints[index]);
+    list_of_ints.erase(list_of_ints[index]); // erases the value at the position indicated by the index
+
     list_of_ints.print();
 
 

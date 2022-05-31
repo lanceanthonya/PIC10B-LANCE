@@ -74,6 +74,15 @@ public:
     
     size_t get_size() const;
     
+    /**
+    Operator overload for indexing operator
+
+    @param index
+
+    @return an Iterator object at the position in the List corresponding with index. Note that List[0] would be an Iterator object referring the First value
+    */
+    Iterator operator[](size_t index) const;
+
 
 private:
     

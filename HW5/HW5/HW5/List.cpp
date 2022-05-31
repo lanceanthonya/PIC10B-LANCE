@@ -185,3 +185,15 @@ Iterator List::end()
     return iter;
 }
 
+Iterator List::operator[](size_t index) const
+{
+    Iterator iter; // idk why but begin() doesn't want to work here so I just rewrote the stuff from begin
+    iter.container = this;
+    iter.position = this->First;
+
+    for (size_t cur_index = 0; cur_index < index; ++cur_index) // increments the Iterator until the index the iterator corresponds to matches the user-inputted index
+    {
+        ++iter; // moves the iterator to the Next value
+    }
+    return iter;
+}
