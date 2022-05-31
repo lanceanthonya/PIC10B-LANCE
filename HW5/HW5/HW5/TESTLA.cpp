@@ -63,10 +63,15 @@ int main()
     cout << "\nWhat index to remove a value?: ";
     cin >> index;
 
-    cout << "Erased value: "<< *(list_of_ints[index]);
+    cout << "\nErased value: "<< *(list_of_ints[index])<<"\n";
     list_of_ints.erase(list_of_ints[index]); // erases the value at the position indicated by the index
 
     list_of_ints.print();
+
+    size_t index_1, index_2;
+
+    cout << "Write two indeces to swap, separated by a space: ";
+    cin >> index_1>>index_2;
 
 
     return 0;
