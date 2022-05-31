@@ -55,7 +55,7 @@ bool Iterator::operator==(const Iterator& second) const
 
 bool Iterator::operator!=(const Iterator& second) const
 {
-    if(*this==second) // If the two iterators have the same position, this returns false (meaning that they are equal)
+    if(*this==second) // If the two iterators are equal, meaning they have the same position, this returns false (meaning that they are equal)
     {
         return false;
     }

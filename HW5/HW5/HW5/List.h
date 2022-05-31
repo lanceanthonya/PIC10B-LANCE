@@ -45,12 +45,19 @@ public:
     void push_front(Node* new_node);
     
     /**
+     Addss a new value to the end of the list, such that it becomes the new Tail
+     
+     @param new_node a new node to add to the list
+     */
+    void push_back(Node* new_node);
+    
+    /**
      Sorts the list in place
      */
     void sort();
     
     /**
-     Prints the values of the list starting from the head and ending at the tail
+     Prints the values of the list starting from the head and ending at the tail recursively
      */
     void print() const;
     

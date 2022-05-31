@@ -32,15 +32,12 @@ int main()
     
     List list_of_ints;
 
-    size_t number_of_vals = val_vector.size();
-    for (size_t current = number_of_vals-1; 0<=current; --current)
+    size_t final_index = (val_vector.size())-1;
+    for (size_t current = 0; current<=final_index; ++current)
     {
         
-        list_of_ints.push_front( new Node(val_vector[current]) );
-        if (current == 0)
-        {
-            break;
-        }
+        list_of_ints.push_back( new Node(val_vector[current]) );
+
     }
     
     list_of_ints.print();

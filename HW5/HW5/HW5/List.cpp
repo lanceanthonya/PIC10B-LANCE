@@ -41,6 +41,22 @@ void List::push_front(Node* new_node)
     ++size; // increments the value of size
 }
 
+void List::push_back(Node* new_node)
+{
+    if (Last==nullptr) // if the list is empty, sets the node as both the last and first node
+    {
+        First = new_node;
+        Last = new_node;
+    }
+    else // otherwise, if the List has existing items, this means that the Last object exists and therefore the new_node will replace it
+    {
+        Last->next = new_node; // sets a pointer to the new node for the current Last
+        new_node->prev = Last; // sets a pointer to the current Last for the new node
+        Last = new_node; // makes new_node the new value for Last/ the "Tail"
+    }
+    ++size; // increments the value of size
+}
+
 void List::sort()
 {
     
