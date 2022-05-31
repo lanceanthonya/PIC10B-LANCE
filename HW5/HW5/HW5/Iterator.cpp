@@ -30,9 +30,9 @@ void Iterator::operator--()
 
 }
 
-bool Iterator::operator==(Iterator second) const
+bool Iterator::operator==(const Iterator& second) const
 {
-    if (this->position == second.position)
+    if (this->position == second.position) // checks if the iterator on the left matchews the iterator position on the right
     {
         return true;
     }
@@ -40,4 +40,18 @@ bool Iterator::operator==(Iterator second) const
     {
         return false;
     }
+}
+
+
+bool Iterator::operator!=(const Iterator& second) const
+{
+    if(*this==second)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+    
 }

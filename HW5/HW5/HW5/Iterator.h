@@ -26,9 +26,9 @@ public:
     
     void operator--();
     
-    bool operator==(Iterator second) const;
+    bool Iterator::operator==(const Iterator& second) const;
 
-    bool operator!=(Iterator second) const;
+    bool Iterator::operator!=(const Iterator& second) const;
 
     
 private:
