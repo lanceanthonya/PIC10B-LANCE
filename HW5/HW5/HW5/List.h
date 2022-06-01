@@ -118,6 +118,11 @@ public:
     */
     Iterator operator[](size_t index) const;
     
+    /**
+    Merges two lists
+     */
+    List merge(const List& list_b);
+    
 private:
     
     

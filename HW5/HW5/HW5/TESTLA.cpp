@@ -12,37 +12,38 @@
 using namespace std;
 int main()
 {
-    cout<< "Please input a set of nonnegative numbers for a List\n";
-    cout<< "(Enter -1 when you are finished);\n\n";
-    
-    vector<int> val_vector;
-    int end_condition = -1;
-    int num = 0 ;
-    while (cin >> num)
-    {
-        if (num == end_condition)
-        {
-            break;
-        }
-        else
-        {
-            val_vector.push_back(num);
-        }
-    }
-    
-    List list_of_ints;
-
-    size_t final_index = (val_vector.size())-1;
-    for (size_t current = 0; current<=final_index; ++current)
-    {
-        
-        list_of_ints.push_back( new Node(val_vector[current]) );
-
-    }
-    cout << "The inputted list: ";
-
-    list_of_ints.print();
-    cout << "\n";
+//    cout<< "(For List 1) ";
+//    cout<< "Please input a set of nonnegative numbers for a List\n";
+//    cout<< "(Enter -1 when you are finished);\n\n";
+//
+//    vector<int> val_vector;
+//    int end_condition = -1;
+//    int num = 0 ;
+//    while (cin >> num)
+//    {
+//        if (num == end_condition)
+//        {
+//            break;
+//        }
+//        else
+//        {
+//            val_vector.push_back(num);
+//        }
+//    }
+//
+//    List list_of_ints;
+//
+//    size_t final_index = (val_vector.size())-1;
+//    for (size_t current = 0; current<=final_index; ++current)
+//    {
+//
+//        list_of_ints.push_back( new Node(val_vector[current]) );
+//
+//    }
+//    cout << "The inputted list: ";
+//
+//    list_of_ints.print();
+//    cout << "\n";
 
     // testing iterator for: adding a number to a certain position
 
@@ -81,8 +82,28 @@ int main()
 //
 //    cout << "\n";
 //
-    list_of_ints.sort();
-    list_of_ints.print();
+//    list_of_ints.sort();
+//    list_of_ints.print();
+//
+    
+    //Testing merge()
+    
+    List list_a;
+    List list_b;
+    vector<int> vec_a = {1,7,12};
+    vector<int> vec_b = {8,3,11,2,2,1};
+    
+    for (int n : vec_a)
+    {
+        list_a.push_back(new Node(n));
+    }
+    for (int n : vec_b)
+    {
+        list_b.push_back(new Node(n));
+    }
+    
+    List new_list = (list_a.merge(list_b));
+    new_list.print();
     
     return 0;
 }
