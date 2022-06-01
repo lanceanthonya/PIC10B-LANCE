@@ -82,7 +82,7 @@ int main()
     
     cout<<"If we merge this list with the list (2,3,5,7,11) we obtain\n";
     (list_of_ints.merge(merge_partner)).print();
-    
+    cout<<"\n";
     
 
 }

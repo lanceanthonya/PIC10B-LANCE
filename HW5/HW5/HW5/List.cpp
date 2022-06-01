@@ -121,6 +121,7 @@ void List::insert(Iterator pos, int i)
         new_node->prev = new_prev;
         new_prev->next = new_node;
     }
+    ++size;
   
 }
 

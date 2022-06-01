@@ -90,8 +90,8 @@
 //    
 //    List list_a;
 //    List list_b;
-//    vector<int> vec_a = {1,7,12};
-//    vector<int> vec_b = {8,3,11,2,2,1};
+//    vector<int> vec_a = {8,3,11,2,2,1} ;
+//    vector<int> vec_b = {1,7,12};
 //    
 //    for (int n : vec_a)
 //    {
