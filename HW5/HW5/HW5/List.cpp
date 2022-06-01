@@ -249,7 +249,6 @@ void List::swap(Iterator pos_a, Iterator pos_b)
 List List::merge(const List& list_b)
 {
     List new_list;
-    List list_a = *this;
     // the new List's head is always the first list's head, where the first list refers to *this
     
     size_t max_a_index = this->size -1 ;
@@ -270,7 +269,7 @@ List List::merge(const List& list_b)
     {
         if (max_a_index>= current_index)
         {
-            new_list.push_back(new Node(*list_a[current_index]));
+            new_list.push_back(new Node(*(*this)[current_index]));
         }
         
         if (max_b_index>= current_index)

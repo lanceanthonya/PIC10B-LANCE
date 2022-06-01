@@ -101,7 +101,7 @@ int main()
     {
         list_b.push_back(new Node(n));
     }
-    
+    //for some reason, list_a seems to get destructed when merge() is called
     List new_list = (list_a.merge(list_b));
     new_list.print();
     
