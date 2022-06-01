@@ -15,7 +15,7 @@ int main()
     cout<< "Please input a set of nonnegative numbers for a List\n";
     cout<< "(Enter -1 when you are finished);\n\n";
 
-    vector<int> val_vector;
+    vector<int> vec_1;
     int end_condition = -1;
     int num = 0 ;
     while (cin >> num)
@@ -26,21 +26,21 @@ int main()
         }
         else
         {
-            val_vector.push_back(num);
+            vec_1.push_back(num);
         }
     }
 
-    List list_of_ints;
+    List list_1;
 
-    size_t final_index = (val_vector.size())-1;
+    size_t final_index = (vec_1.size())-1;
     for (size_t current = 0; current<=final_index; ++current)
     {
 
-        list_of_ints.push_back( new Node(val_vector[current]) );
+        list_1.push_back( new Node(vec_1[current]) );
 
     }
     cout << "Your list is\n";
-    list_of_ints.print();
+    list_1.print();
     cout << "\n\n";
 
     size_t index = 0;
@@ -53,35 +53,35 @@ int main()
         {
             cout<< "Select a value for insertion: ";
             cin>>new_value;
-            list_of_ints.insert(list_of_ints[index], new_value);
+            list_1.insert(list_1[index], new_value);
         }
     }
     while (index != end_condition);
     cout<<"\n\n\n";
     
     cout<< "The augmented List is\n";
-    list_of_ints.print();
+    list_1.print();
     cout<<"\n\n";
     
     cout<< "When we sort the previous list we obtain\n";
-    list_of_ints.sort();
-    list_of_ints.print();
+    list_1.sort();
+    list_1.print();
     cout<<"\n";
     
     cout<< "And this sorted list in reverse order is\n";
-    list_of_ints.reverse();
-    list_of_ints.print();
+    list_1.reverse();
+    list_1.print();
     cout<<"\n";
     
-    List merge_partner;
-    vector<int> new_vector = {2,3,5,7,11};
-    for (int n : new_vector)
+    List list_2;
+    vector<int> vec_2 = {2,3,5,7,11};
+    for (int n : vec_2)
     {
-        merge_partner.push_back(new Node(n));
+        list_2.push_back(new Node(n));
     }
     
     cout<<"If we merge this list with the list (2,3,5,7,11) we obtain\n";
-    (list_of_ints.merge(merge_partner)).print();
+    (list_1.merge(list_2)).print();
     cout<<"\n";
     
 
