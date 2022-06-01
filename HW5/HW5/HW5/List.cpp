@@ -120,8 +120,8 @@ void List::insert(Iterator pos, int i)
 
         new_node->prev = new_prev;
         new_prev->next = new_node;
+        ++size;
     }
-    ++size;
   
 }
 
@@ -252,7 +252,7 @@ List List::merge(const List& list_b)
     List new_list;
     // the new List's head is always the first list's head, where the first list refers to *this
     
-    size_t max_a_index = (this->size) -1 ;
+    size_t max_a_index = (size) -1 ;
     size_t max_b_index = list_b.size-1;
     
     new_list.size = (this->size) + (list_b.size);
