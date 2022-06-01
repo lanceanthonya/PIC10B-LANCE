@@ -29,7 +29,7 @@ public:
     ~List();
     
     /**
-     Helper function for the desttructor
+     Helper function for the destructor
      
      @param current_node the current LL node to be deleted
      */
@@ -55,7 +55,7 @@ public:
     void push_back(Node* new_node);
     
     /**
-     Sorts the list in place using a selection sort algorithhm
+     Sorts the list in place from ascending order using a selection sort algorithhm
      */
     void sort();
     
@@ -67,17 +67,17 @@ public:
     /**
      Helper function for the print function recursively printing the values starting from the head and ending at the tail
      
-     @param current_node the current node being printed
+     @param current_node the current node being printed to the console
      */
     void print_helper(const Node* current_node) const;
     
     /**
-     Creates a node at the index corressponding to pos, by shsifting the existing node  after it
+     Creates a node at the position/index corressponding to pos, by shhifting the existing node  after it towards the Tail/Last node
      
      @param pos iterator refering to the index of the value to be shifted forward
-     @param i the node value to be created
+     @param i the  value of the node to be created on the Heap
      */
-    void insert(Iterator pos, int i);
+    void insert(Iterator pos, const int i);
 
     /**
      Deletes the node corresponding to pos
@@ -103,11 +103,19 @@ public:
     Iterator end();
     
     /**
-     Returns the number of nodes in the lit
+     Returns the number of nodes in the List
+     
+     @return the number of nodes in the List
      */
     size_t get_size() const;
 
-    void swap(Iterator pos_a, Iterator pos_b);
+    /**
+     Swaps the int vals of two nodes
+     
+     @param pos_a the first node to have itss value swapped
+     @param pos_b the node that switches its val with pos_a
+     */
+    void swap(Iterator& pos_a, Iterator& pos_b);
     
     /**
     Operator overload for indexing operator
@@ -116,7 +124,7 @@ public:
 
     @return an Iterator object at the position in the List corresponding with index. Note that List[0] would be an Iterator object referring the First value
     */
-    Iterator operator[](size_t index) const;
+    Iterator operator[](const size_t index) const;
     
     /**
     Merges two lists

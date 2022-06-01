@@ -17,7 +17,7 @@ Iterator::Iterator():
 
 int Iterator::operator*() const
 {
-    return (position->val);
+    return (position->val); // returns the val member of the position as an int
 }
 
 void Iterator::operator++()
@@ -42,7 +42,7 @@ void Iterator::operator--()
 
 bool Iterator::operator==(const Iterator& second) const
 {
-    if (position == second.position) // checks if the iterator on the left matchews the iterator position on the right
+    if (position == second.position) // checks if the iterator on the left matches the iterator position on the right
     {
         return true;
     }

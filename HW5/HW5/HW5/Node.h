@@ -43,7 +43,7 @@ private:
     Node* prev; // prev refers to the value facing the "head"/start of the linked list
     Node* next; // next refers to the value facing the "tail"/end of the linked list
     
-    // Grants friendship to the List and Iterator objects, so that they can alter/read the left and right values
+    // Grants friendship to the List and Iterator objects, so that they can alter/read the next and prev values
     friend class List;
     friend class Iterator;
 };

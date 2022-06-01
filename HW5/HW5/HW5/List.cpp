@@ -94,7 +94,7 @@ void List::List_des_helper(Node* current_node)
     
 }
 
-void List::insert(Iterator pos, int i)
+void List::insert(Iterator pos, const int i)
 {
     // first create a new node
 
@@ -180,7 +180,7 @@ Iterator List::end()
     return iter;
 }
 
-Iterator List::operator[](size_t index) const
+Iterator List::operator[](const size_t index) const
 {
     Iterator iter; // idk why but begin() doesn't want to work here so I just rewrote the stuff from begin
     iter.container = this;
@@ -240,7 +240,7 @@ void List::sort()
     }
 }
 
-void List::swap(Iterator pos_a, Iterator pos_b)
+void List::swap(Iterator& pos_a, Iterator& pos_b)
 {
     int temp = *pos_a;
     pos_a.position->val = *pos_b; // the value of the second Iterator becomess the value of thhe first iterator
