@@ -46,38 +46,43 @@ int main()
 
     // testing iterator for: adding a number to a certain position
 
-    size_t index;
-    int value;
-
-    cout << "What index to add the new value?: ";
-    cin >> index;
-
-    cout << "What value to insert at that index? ";
-    cin >> value; 
-
-
-
-    list_of_ints.insert(list_of_ints[index], value); // creates a new node that shifts the current node at that position to becoming the next value, relative to the new node.
-    list_of_ints.print();
-
-    cout << "\nWhat index to remove a value?: ";
-    cin >> index;
-
-    cout << "\nErased value: "<< *(list_of_ints[index])<<"\n";
-    list_of_ints.erase(list_of_ints[index]); // erases the value at the position indicated by the index
-
-    list_of_ints.print();
+//    size_t index;
+//    int value;
+//
+//    cout << "What index to add the new value?: ";
+//    cin >> index;
+//
+//    cout << "What value to insert at that index? ";
+//    cin >> value;
+//
+//
+//
+//    list_of_ints.insert(list_of_ints[index], value); // creates a new node that shifts the current node at that position to becoming the next value, relative to the new node.
+//    list_of_ints.print();
+//
+//    cout << "\nWhat index to remove a value?: ";
+//    cin >> index;
+//
+//    cout << "\nErased value: "<< *(list_of_ints[index])<<"\n";
+//    list_of_ints.erase(list_of_ints[index]); // erases the value at the position indicated by the index
+//
+//    list_of_ints.print();
 
     //size_t index_1, index_2;
 
     //cout << "Write two indeces to swap, separated by a space: ";
-    //cin >> index_1>>index_2;
-    cout<< "\nReversed list: \n";
-    
-    list_of_ints.reverse();
-    
+//    //cin >> index_1>>index_2;
+//    cout<< "\nReversed list: \n";
+//
+//    list_of_ints.reverse();
+//
+//    list_of_ints.print();
+//
+//
+//    cout << "\n";
+//
+    list_of_ints.sort();
     list_of_ints.print();
     
-
     return 0;
 }

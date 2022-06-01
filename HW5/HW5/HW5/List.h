@@ -107,7 +107,7 @@ public:
      */
     size_t get_size() const;
 
-    //void swap(Iterator pos_a, Iterator pos_b);
+    void swap(Iterator pos_a, Iterator pos_b);
     
     /**
     Operator overload for indexing operator

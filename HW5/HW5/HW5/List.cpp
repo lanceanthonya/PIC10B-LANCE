@@ -54,10 +54,6 @@ void List::push_back(Node* new_node)
     ++size; // increments the value of size
 }
 
-void List::sort()
-{
-    
-}
 
 void List::print() const
 {
@@ -208,7 +204,7 @@ void List::reverse()
     
     while(iter != this->begin()) // keepss iterating until reaching the new Head, which was the original Tail
     {
-        --iter; // for the current iterator, goes to the prev value. If iter == this->end(), then this brings iter to the new tail, or the current head. 
+        --iter; // for the current iterator, goes to the prev value. If iter == this->end(), then this brings iter to the new tail, or the current head.
         Node* current_node = iter.position;
 
         Node* new_next = current_node->prev; // a pointer to the original prev Node
@@ -217,10 +213,35 @@ void List::reverse()
         // swaps the prev and next pointers for the current node
         current_node->prev = new_prev;
         current_node->next = new_next;
-        
     }
-    
-
 }
 
+void List::sort()
+{
+    Iterator first_pos = this -> begin();
+    Iterator last_pos = this -> end();
+    
+    for (Iterator iter_1 = first_pos; iter_1 != last_pos; ++ iter_1)
+    {
+        Iterator new_lowest_pos = iter_1;
+        
+        for (Iterator iter_2 = iter_1; iter_2 != last_pos; ++ iter_2)
+        {
+            if (*iter_2<*new_lowest_pos )
+            {
+                new_lowest_pos = iter_2;
+            }
+        }
+        if (iter_1 != new_lowest_pos)
+        {
+            swap (iter_1, new_lowest_pos);
+        }
+    }
+}
 
+void List::swap(Iterator pos_a, Iterator pos_b)
+{
+    int temp = *pos_a;
+    pos_a.position->val = *pos_b;
+    pos_b.position->val = temp;
+}
