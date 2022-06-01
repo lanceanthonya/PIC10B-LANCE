@@ -252,28 +252,34 @@ List List::merge(const List& list_b)
     List new_list;
     // the new List's head is always the first list's head, where the first list refers to *this
     
-    size_t max_a_index = this->size -1 ;
+    size_t max_a_index = (this->size) -1 ;
     size_t max_b_index = list_b.size-1;
+    
+    new_list.size = (this->size) + (list_b.size);
     
     size_t max_index;
     
-    if (max_a_index >= max_b_index) // if list_a has more or as many nodes as list_b, then the max possible index is based on list_a
+    if (max_a_index > max_b_index) // if list_a has more or as many nodes as list_b, then the max possible index is based on list_a
     {
         max_index = max_a_index;
     }
-    else // if list_b has more valuess then the max possible index is based on list_b
+    else if (max_b_index>max_a_index)// if list_b has more valuess then the max possible index is based on list_b
     {
         max_index = max_b_index;
+    }
+    else
+    {
+        max_index = max_a_index;
     }
     
     for (size_t current_index = 0; current_index<=max_index; ++ current_index )
     {
-        if (max_a_index>= current_index)
+        if (max_a_index>=current_index)
         {
             new_list.push_back(new Node(*(*this)[current_index]));
         }
         
-        if (max_b_index>= current_index)
+        if (max_b_index>=current_index)
         {
             new_list.push_back(new Node(*list_b[current_index]));
         }
