@@ -28,8 +28,8 @@ void Iterator::operator++()
 
 void Iterator::operator--()
 {
-    assert(position != container->First);
-    if (position == nullptr) // if the position goes past the tail, sets the position as the tail value of the container
+    assert(position != container->First); // triggers assertion if the current position is the Head, since that will result in nullptr being dealt with
+    if (position == nullptr) // if the position goes past the tail, sets the position as the tail Node of container
     {
         position = container->Last;
     }

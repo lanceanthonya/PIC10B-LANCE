@@ -21,10 +21,6 @@ size_t List::get_size() const
     return size;
 }
 
-void List::reverse()
-{
-    
-}
 
 void List::push_front(Node* new_node)
 {
@@ -199,3 +195,32 @@ Iterator List::operator[](size_t index) const
     }
     return iter;
 }
+
+void List::reverse()
+{
+    // First, swaps the nodes for First and Last
+    Node* temp = Last;
+    Last = First;
+    First = temp;
+
+    // Iter starts at the new Tail, or the original Head
+    Iterator iter = this-> end();
+    
+    while(iter != this->begin()) // keepss iterating until reaching the new Head, which was the original Tail
+    {
+        --iter; // for the current iterator, goes to the prev value. If iter == this->end(), then this brings iter to the new tail, or the current head. 
+        Node* current_node = iter.position;
+
+        Node* new_next = current_node->prev; // a pointer to the original prev Node
+        Node* new_prev = current_node->next; // a pointer to the original next Node
+
+        // swaps the prev and next pointers for the current node
+        current_node->prev = new_prev;
+        current_node->next = new_next;
+        
+    }
+    
+
+}
+
+

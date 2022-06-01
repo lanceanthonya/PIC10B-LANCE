@@ -35,7 +35,6 @@ private:
     
     Node* position;
     const List* container;
-    
     friend class List;
 
 };

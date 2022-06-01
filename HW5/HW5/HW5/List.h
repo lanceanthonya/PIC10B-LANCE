@@ -112,14 +112,14 @@ public:
     /**
     Operator overload for indexing operator
 
-    @param index
+    @param index the index of a node in the list, starting from 0
 
     @return an Iterator object at the position in the List corresponding with index. Note that List[0] would be an Iterator object referring the First value
     */
     Iterator operator[](size_t index) const;
-
-
+    
 private:
+    
     
     Node* First; // refers to the "head" of the List
     Node* Last; // refers to the "tail" of the List

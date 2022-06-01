@@ -68,11 +68,16 @@ int main()
 
     list_of_ints.print();
 
-    size_t index_1, index_2;
+    //size_t index_1, index_2;
 
-    cout << "Write two indeces to swap, separated by a space: ";
-    cin >> index_1>>index_2;
-
+    //cout << "Write two indeces to swap, separated by a space: ";
+    //cin >> index_1>>index_2;
+    cout<< "\nReversed list: \n";
+    
+    list_of_ints.reverse();
+    
+    list_of_ints.print();
+    
 
     return 0;
 }
