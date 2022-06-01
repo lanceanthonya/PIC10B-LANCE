@@ -166,6 +166,8 @@ Iterator List::erase(Iterator pos)
     Iterator r;
     r.position = after_ntr; // sets the new iterator's position to point at the node after the node that was just removed
     r.container = this;
+    
+    --size;
     return r;
 }
 

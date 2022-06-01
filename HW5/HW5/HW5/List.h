@@ -28,15 +28,18 @@ public:
      */
     ~List();
     
+    /**
+     Helper function for the desttructor
+     
+     @param current_node the current LL node to be deleted
+     */
     void List_des_helper(Node* current_node);
 
     /**
      Reverses the order of a list
      */
     void reverse();
-    
-    //void push_front(int new_val);
-    
+        
     /**
      Addss a new value to the front of the list, such that it becomes the new Head
      
@@ -52,7 +55,7 @@ public:
     void push_back(Node* new_node);
     
     /**
-     Sorts the list in place
+     Sorts the list in place using a selection sort algorithhm
      */
     void sort();
     
@@ -61,17 +64,47 @@ public:
      */
     void print() const;
     
+    /**
+     Helper function for the print function recursively printing the values starting from the head and ending at the tail
+     
+     @param current_node the current node being printed
+     */
     void print_helper(const Node* current_node) const;
     
+    /**
+     Creates a node at the index corressponding to pos, by shsifting the existing node  after it
+     
+     @param pos iterator refering to the index of the value to be shifted forward
+     @param i the node value to be created
+     */
     void insert(Iterator pos, int i);
 
-    
+    /**
+     Deletes the node corresponding to pos
+     
+     @param pos an iterator refering to the index of the value being deleted
+     
+     @return an iterator referring to the node immediately after the node that was just deleted
+     */
     Iterator erase(Iterator pos);
     
+    /**
+     Creates an iterator based on the head
+     
+     @return an iterator whose position value is that of the First node
+     */
     Iterator begin();
     
+    /**
+     Creates an iterator based on the Tail/Last node
+     
+     @return an iterator whose position value is that of the Last node
+     */
     Iterator end();
     
+    /**
+     Returns the number of nodes in the lit
+     */
     size_t get_size() const;
 
     //void swap(Iterator pos_a, Iterator pos_b);
