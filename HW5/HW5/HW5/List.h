@@ -129,7 +129,9 @@ public:
     /**
     Merges two lists
      */
-    List merge(const List& list_b);
+    void merge(const List& list_a, const List& list_b);
+    
+    void clear();
     
 private:
     

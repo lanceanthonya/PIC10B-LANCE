@@ -13,14 +13,15 @@ using namespace std;
 int main()
 {
     cout<< "Please input a set of nonnegative numbers for a List\n";
-    cout<< "(Enter -1 when you are finished);\n\n";
+    cout<< "(Enter -1 when you are finished):\n\n";
 
+    // Creates a vector of ints to temporarily hold values that will be used to creete the Listt
     vector<int> vec_1;
-    int end_condition = -1;
+    int end_condition = -1; // when the inputted number is -1, this stops acceping vals
     int num = 0 ;
     while (cin >> num)
     {
-        if (num == end_condition)
+        if (num == end_condition) // stops looping when reaching -1 is inputted
         {
             break;
         }
@@ -29,7 +30,7 @@ int main()
             vec_1.push_back(num);
         }
     }
-//
+
     List list_1;
 
     size_t final_index = (vec_1.size())-1;
@@ -74,14 +75,17 @@ int main()
     cout<<"\n";
     
     List list_2;
-    vector<int> vec_2 = {2,3,5,7,11};
+    vector<int> vec_2 = {2,3,5,7,11}; // used for creating the hard coded list that gets merged with list_1
     for (int n : vec_2)
     {
         list_2.push_back(new Node(n));
     }
     
+    List list_3;
     cout<<"If we merge this list with the list (2,3,5,7,11) we obtain\n";
-    (list_1.merge(list_2)).print();
+    list_3.merge(list_1, list_2);
+    list_3.print();
+    
     cout<<"\n";
     
 

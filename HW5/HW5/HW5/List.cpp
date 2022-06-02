@@ -81,6 +81,14 @@ List::~List()
     List_des_helper(First); // starts destruction from the Start of the List
 }
 
+void List::clear()
+{
+    List_des_helper(First);
+    First = nullptr;
+    Last = nullptr;
+    size = 0;
+}
+
 void List::List_des_helper(Node* current_node)
 {
     if (current_node != nullptr) // only destructs if the current_node is an actual node, not nullptr
@@ -247,43 +255,39 @@ void List::swap(Iterator& pos_a, Iterator& pos_b)
     pos_b.position->val = temp; // the value of the first Iterator becomess the value of thhe ssecond iterator
 }
 
-List List::merge(const List& list_b)
+void List::merge(const List& list_a, const List& list_b)
 {
-    List new_list;
-    // the new List's head is always the first list's head, where the first list refers to *this
+    // gets the maximum index of both List args to determine when to stop getting values from it
+    size_t max_a_index = list_a.get_size()-1;
+    size_t max_b_index = list_b.get_size()-1;
     
-    size_t max_a_index = (size) -1 ;
-    size_t max_b_index = list_b.size-1;
-    
-    new_list.size = (this->size) + (list_b.size);
+    // Empties the list that will hold the merged data (in case it isn't already empty) and sets the new size of the list to be the sum of the existing lists' sizes.
+    this -> clear();
+    this->size = (list_a.get_size()) + (list_b.get_size());
     
     size_t max_index;
     
-    if (max_a_index > max_b_index) // if list_a has more or as many nodes as list_b, then the max possible index is based on list_a
+    if (max_a_index >= max_b_index) // if list_a has more or as many nodes as list_b, then the max possible index is based on list_a
     {
         max_index = max_a_index;
     }
-    else if (max_b_index>max_a_index)// if list_b has more valuess then the max possible index is based on list_b
+    else // if list_b has more valuess then the max possible index is based on list_b
     {
         max_index = max_b_index;
     }
-    else
-    {
-        max_index = max_a_index;
-    }
     
-    for (size_t current_index = 0; current_index<=max_index; ++ current_index )
+    for (size_t current_index = 0; current_index<=max_index; ++ current_index ) //iterates through each index in both Lists until reaching the max index
     {
-        if (max_a_index>=current_index)
+        
+        if (max_a_index>=current_index) //stops adding values from list_a if the current_index exceeds he max for a
         {
-            new_list.push_back(new Node(*(*this)[current_index]));
+            this->push_back(new Node(*list_a[current_index]));
         }
         
-        if (max_b_index>=current_index)
+        if (max_b_index>=current_index)  //stops adding values from list_b if the current_index exceeds he max for b
         {
-            new_list.push_back(new Node(*list_b[current_index]));
+            this->push_back(new Node(*list_b[current_index]));
         }
     }
     
-    return new_list;
 }
