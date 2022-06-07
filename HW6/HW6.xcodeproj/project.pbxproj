@@ -35,7 +35,7 @@
 		4B3958DB284FCC9F00EC9563 /* TreeIterator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeIterator.h; sourceTree = "<group>"; };
 		4B3958DC284FCCAD00EC9563 /* TreeIterator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TreeIterator.cpp; sourceTree = "<group>"; };
 		4B3958DE284FCFD900EC9563 /* hw6.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hw6.cpp; sourceTree = "<group>"; };
-		4B3958E0284FCFEF00EC9563 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = test.cpp; path = HW6/test.cpp; sourceTree = "<group>"; };
+		4B3958E0284FCFEF00EC9563 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,6 @@
 		4B3958C2284FCAD200EC9563 = {
 			isa = PBXGroup;
 			children = (
-				4B3958E0284FCFEF00EC9563 /* test.cpp */,
 				4B3958CD284FCAD200EC9563 /* HW6 */,
 				4B3958CC284FCAD200EC9563 /* Products */,
 			);
@@ -76,6 +75,7 @@
 				4B3958DB284FCC9F00EC9563 /* TreeIterator.h */,
 				4B3958DC284FCCAD00EC9563 /* TreeIterator.cpp */,
 				4B3958DE284FCFD900EC9563 /* hw6.cpp */,
+				4B3958E0284FCFEF00EC9563 /* test.cpp */,
 			);
 			path = HW6;
 			sourceTree = "<group>";

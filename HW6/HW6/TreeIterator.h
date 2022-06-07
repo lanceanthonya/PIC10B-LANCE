@@ -1,12 +1,12 @@
-//
-//  TreeIterator.h
-//  HW6
-//
-//  Created by Lance Aquino on 6/7/22.
-//
+/*
+ PIC 10B Lecture 1, Homework 6
+ Purpose: HW6, TreeIterator header file
+ Author: Lance Anthony Aquino
+ Date: 06/07/2022
+*/
 
-#ifndef TreeIterator_h
-#define TreeIterator_h
+#ifndef __T_ITERATOR__
+#define __T_ITERATOR__
 
 
-#endif /* TreeIterator_h */
+#endif /* __T_ITERATOR__ */

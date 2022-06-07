@@ -1,12 +1,18 @@
-//
-//  BinarySearchTree.h
-//  HW6
-//
-//  Created by Lance Aquino on 6/7/22.
-//
+/*
+ PIC 10B Lecture 1, Homework 6
+ Purpose: HW6, BinarySearchTree header file
+ Author: Lance Anthony Aquino
+ Date: 06/07/2022
+*/
 
-#ifndef BinarySearchTree_h
-#define BinarySearchTree_h
+#ifndef __BSEARCHTREE__
+#define __BSEARCHTREE__
 
+#include "TreeNode.h"
 
-#endif /* BinarySearchTree_h */
+class BinarySearchTree
+{
+    
+};
+
+#endif /* __BSEARCHTREE__ */
