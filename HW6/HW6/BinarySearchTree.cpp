@@ -7,3 +7,15 @@
 
 #include "BinarySearchTree.h"
 #include "TreeNode.h"
+
+
+BinarySearchTree::BinarySearchTree():
+    root(nullptr),
+    size(0)
+{}
+
+BinarySearchTree::BinarySearchTree(int value):
+    root(new TreeNode(value)),
+    size(1)
+{}
+

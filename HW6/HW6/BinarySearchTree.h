@@ -10,9 +10,19 @@
 
 #include "TreeNode.h"
 
+class TreeNode; // forward declaration of TreeNode to eliminate circular dependency
 class BinarySearchTree
 {
+public:
+    BinarySearchTree();
     
+    BinarySearchTree(int value);
+        
+private:
+    
+    TreeNode* root;
+    int size;
+
 };
 
 #endif /* __BSEARCHTREE__ */
