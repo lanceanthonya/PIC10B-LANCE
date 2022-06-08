@@ -11,5 +11,7 @@
 
 int main()
 {
+    BinarySearchTree bullsshit;
+    
     return 0;
 }

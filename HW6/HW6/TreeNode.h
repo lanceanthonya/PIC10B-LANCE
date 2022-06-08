@@ -9,6 +9,7 @@
 #define __TREENODE__
 
 #include "BinarySearchTree.h"
+#include "TreeIterator.h"
 
 class TreeNode
 {
@@ -18,11 +19,16 @@ public:
     
     TreeNode(int _val);
     
-    int get_val() const; 
+    int get_val() const;
+    
+    void prnt_incr_helper() const;
+    
+    void prnt_decr_helper() const;
     
 private:
     
     friend class BinarySearchTree;
+    friend class TreeIterator;
     
     int val;
     TreeNode* right;

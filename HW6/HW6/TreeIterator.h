@@ -8,5 +8,16 @@
 #ifndef __T_ITERATOR__
 #define __T_ITERATOR__
 
+#include "TreeNode.h"
+#include "BinarySearchTree.h"
+
+class TreeIterator{
+    
+public:
+    
+private:
+    
+    
+};
 
 #endif /* __T_ITERATOR__ */
