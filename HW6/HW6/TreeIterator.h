@@ -11,12 +11,19 @@
 #include "TreeNode.h"
 #include "BinarySearchTree.h"
 
+class TreeNode;
+class BinarySearchTree;
 class TreeIterator{
     
 public:
     
+    TreeIterator();
+    
 private:
     
+    friend class BinarySearchTree;
+    TreeNode* position;
+    const BinarySearchTree* container;
     
 };
 

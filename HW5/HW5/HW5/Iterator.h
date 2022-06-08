@@ -62,7 +62,7 @@ private:
     
     Node* position;
     const List* container;
-    friend class List; // Since the Iterator class should only be edittted by the List class
+    friend class List; // Since the Iterator class should only be editted by the List class
 
 };
 

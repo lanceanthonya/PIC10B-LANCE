@@ -25,6 +25,8 @@ public:
     
     void prnt_decr_helper() const;
     
+    bool insert_helper(int new_num);
+    
 private:
     
     friend class BinarySearchTree;

@@ -11,7 +11,7 @@
 
 int main()
 {
-    BinarySearchTree bullsshit;
+    BinarySearchTree bullshit;
     
     return 0;
 }

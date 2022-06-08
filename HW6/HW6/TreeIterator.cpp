@@ -6,3 +6,9 @@
 */
 
 #include <stdio.h>
+#include "TreeIterator.h"
+
+TreeIterator::TreeIterator():
+    position(nullptr),
+    container(nullptr)
+{}

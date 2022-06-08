@@ -54,3 +54,9 @@ void TreeNode::prnt_decr_helper() const
     }
     
 }
+
+bool TreeNode::insert_helper(int new_num)
+{
+    
+    return false;
+}

@@ -30,6 +30,10 @@ void BinarySearchTree:: insert(int new_val)
     {
         root = new TreeNode(new_val);
     }
+    else
+    {
+        
+    }
 }
 
 void BinarySearchTree::erase(int value_to_erase)
