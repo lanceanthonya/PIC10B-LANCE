@@ -11,21 +11,48 @@
 #include "BinarySearchTree.h"
 #include "TreeIterator.h"
 
+/**
+ @class TreeNode one node in a binary search tree. Conains an in value at two pointers to two otther nodes on the "left" and "right" of a given node
+ */
 class TreeNode
 {
 public:
     
+    /**
+     Default Constructor for TreeNode that initializes left and right as nullptr, and the val as 0
+     */
     TreeNode();
     
+    /**
+      Constructor for TreeNode that initializes left and right as nullptr, and the val as _val
+     
+     @param _val some into to explicitly set the value of the TreeNode
+     */
     TreeNode(int _val);
     
+    /**
+     Getter functtion for the value stored in the node
+     
+     @return the value
+     */
     int get_val() const;
     
+    /**
+     Helper function for BinarySearchTree::print_increasing(), that prints nodes in increasing order
+     */
     void prnt_incr_helper() const;
     
+    /**
+     Helper function for BinarySearchTree::print_decreasing(), that prints nodes in decreasing order
+     */
     void prnt_decr_helper() const;
     
-    bool insert_helper(int new_num);
+    /**
+     Helper function for adding a new node to the tree
+     
+     @param new_num an int represeing the val of the new Node to add
+    */
+    void insert_helper(int new_num);
     
 private:
     

@@ -15,6 +15,8 @@ class TreeNode; // forward declaration of TreeNode to eliminate circular depende
 class BinarySearchTree
 {
 public:
+    
+    
     BinarySearchTree();
     
     BinarySearchTree(int value);
@@ -33,7 +35,8 @@ public:
     
     void print_decreasing() const; 
     
-        
+  
+    
 private:
     
     TreeNode* root;

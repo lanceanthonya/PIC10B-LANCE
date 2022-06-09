@@ -32,7 +32,7 @@ void BinarySearchTree:: insert(int new_val)
     }
     else
     {
-        
+        root -> insert_helper(new_val);
     }
 }
 
@@ -80,4 +80,5 @@ void BinarySearchTree::tree_des_helper(TreeNode* current_node)
     delete current_node;
     
 }
+
 
