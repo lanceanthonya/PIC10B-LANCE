@@ -12,7 +12,7 @@
 #include "TreeIterator.h"
 
 /**
- @class TreeNode one node in a binary search tree. Conains an in value at two pointers to two otther nodes on the "left" and "right" of a given node
+ @class TreeNode one node in a binary search tree. Conains an in value at two pointers to two otther nodes on the "left" and "right" of a given node. Also stores the parent node, or the node poiting to a given node
  */
 class TreeNode
 {
@@ -52,7 +52,7 @@ public:
      
      @param new_num an int represeing the val of the new Node to add
     */
-    void insert_helper(int new_num);
+    bool insert_helper(int new_num);
     
 private:
     
@@ -62,7 +62,7 @@ private:
     int val;
     TreeNode* right;
     TreeNode* left;
-    
+    TreeNode* daddy; // pointer to the parent node of a given node. Should be nullptr for the root
     
 };
 

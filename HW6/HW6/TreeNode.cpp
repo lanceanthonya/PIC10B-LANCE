@@ -11,13 +11,15 @@
 TreeNode::TreeNode():
     val (0),
     right(nullptr),
-    left(nullptr)
+    left(nullptr),
+    daddy(nullptr)
 {}
     
 TreeNode::TreeNode(int _val):
     val (_val),
     right(nullptr),
-    left(nullptr)
+    left(nullptr),
+    daddy(nullptr)
 {}
 
 int TreeNode::get_val() const
@@ -57,16 +59,19 @@ void TreeNode::prnt_decr_helper() const
 }
 
 
-void TreeNode::insert_helper(int new_num)
+bool TreeNode::insert_helper(int new_num)
 {
     // First, evaluate if the new_number is greater or less than the value stored in the current node
     
+    bool successful_insert = false;
     // If less than the current node's value, go to left side and either insert the new value or go to the node on that side to make the insert_helper evaluation again
     if (new_num < val)
     {
         if (left == nullptr)
         {
             left = new TreeNode(new_num);
+            left -> daddy = this;
+            successful_insert = true;
         }
         else
         {
@@ -80,11 +85,12 @@ void TreeNode::insert_helper(int new_num)
         if (right == nullptr)
         {
             right = new TreeNode(new_num);
+            successful_insert = true;
         }
         else
         {
             right -> insert_helper(new_num);
         }
     }
-    
+    return successful_insert;
 }

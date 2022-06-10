@@ -27,15 +27,22 @@ public:
     
     TreeNode* get_root() const;
     
-    void insert(int new_val);
+    bool insert(int new_val);
     
-    void erase(int value_to_erase);
+    bool erase(int value_to_erase);
     
     void print_increasing() const;
     
     void print_decreasing() const; 
     
-  
+    TreeIterator begin();
+
+    TreeIterator end();
+
+    TreeNode* findmax(TreeNode* current_node);
+    
+    TreeNode* findmin(TreeNode* current_node);
+
     
 private:
     

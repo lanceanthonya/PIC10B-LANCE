@@ -13,8 +13,13 @@
 
 class TreeNode;
 class BinarySearchTree;
-class TreeIterator{
-    
+
+
+/**
+ @class TreeIterator a "pointer" to a given node within the tree
+ */
+class TreeIterator
+{
 public:
     
     TreeIterator();
