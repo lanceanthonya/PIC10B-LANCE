@@ -12,6 +12,7 @@
 #include "TreeIterator.h"
 
 class TreeNode; // forward declaration of TreeNode to eliminate circular dependency
+class TreeIterator;
 class BinarySearchTree
 {
 public:
@@ -35,9 +36,9 @@ public:
     
     void print_decreasing() const; 
     
-    //TreeIterator begin();
+    TreeIterator begin();
 
-    //TreeIterator end();
+    TreeIterator end();
 
     TreeNode* findmax(TreeNode* current_node) const;
     

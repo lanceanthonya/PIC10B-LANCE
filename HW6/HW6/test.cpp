@@ -24,17 +24,17 @@ int main()
     {
         cout<< "There is a 17\n";
     }
-    else {cout<< "There is no 17";}
+    else {cout<< "There is no 17\n";}
     if (bst.find(2)!= nullptr)
     {
         cout<<"There is a 2\n";
     }
-    else {cout<< "There is no 2";}
+    else {cout<< "There is no 2\n";}
     if(bst.find(290)!=nullptr)
     {
-        cout<< "There is a 290";
+        cout<< "There is a 290\n";
     }
-    else {cout<< "There is no 290";}
+    else {cout<< "There is no 290\n";}
     
     return 0;
 }

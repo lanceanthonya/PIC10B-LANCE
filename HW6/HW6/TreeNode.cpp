@@ -94,51 +94,51 @@ bool TreeNode::insert_helper(int new_num)
     }
     return successful_insert;
 }
-
-bool TreeNode::erase_helper (int removed_num)
-{
-    bool val_found = false;
-    if (removed_num == val) // case where the value is found in the tree
-    {
-        // case 1: node has no children
-        if (left == nullptr && right == nullptr)
-        {
-            parent -> change_child(this, nullptr); // changes the pointer to a given node to 
-            delete this;
-            val_found = true;
-        }
-        
-        // case 2: node has only one child
-        if (left == nullptr && right != nullptr) // case 2.1: the right node is the child
-        {
-            
-            TreeNode* original_parent = this -> parent; // right node is promoted to the position that the current node currently occupies
-            
-            TreeNode* promoted_node = this -> right;
-            
-            //original_parent;
-            delete this;
-        }
-        
-        if (left != nullptr && right == nullptr) // case 2.2: the left node is the child
-        {
-            left->parent = this -> parent;
-        }
-        
-        // case 3: node has two children
-        
-        if (left != nullptr && right != nullptr)
-        {
-            
-        }
-        
-    }
-    else // alternate case: node value is not found in the tree
-    {
-        val_found= false;
-    }
-    return val_found;
-}
+//
+//bool TreeNode::erase_helper (int removed_num)
+//{
+//    bool val_found = false;
+//    if (removed_num == val) // case where the value is found in the tree
+//    {
+//        // case 1: node has no children
+//        if (left == nullptr && right == nullptr)
+//        {
+//            parent -> change_child(this, nullptr); // changes the pointer to a given node to
+//            delete this;
+//            val_found = true;
+//        }
+//
+//        // case 2: node has only one child
+//        if (left == nullptr && right != nullptr) // case 2.1: the right node is the child
+//        {
+//
+//            TreeNode* original_parent = this -> parent; // right node is promoted to the position that the current node currently occupies
+//
+//            TreeNode* promoted_node = this -> right;
+//
+//            //original_parent;
+//            delete this;
+//        }
+//
+//        if (left != nullptr && right == nullptr) // case 2.2: the left node is the child
+//        {
+//            left->parent = this -> parent;
+//        }
+//        
+//        // case 3: node has two children
+//
+//        if (left != nullptr && right != nullptr)
+//        {
+//
+//        }
+//
+//    }
+//    else // alternate case: node value is not found in the tree
+//    {
+//        val_found= false;
+//    }
+//    return val_found;
+//}
 
 void TreeNode::change_child (TreeNode* child_node, TreeNode* replacement_node)
 {
