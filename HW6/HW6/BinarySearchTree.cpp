@@ -91,29 +91,29 @@ void BinarySearchTree::tree_des_helper(TreeNode* current_node)
     
 }
 
-TreeIterator BinarySearchTree::begin()
-{
-    TreeIterator iter;
-    TreeNode* min_node = findmin(root);
-    
-    iter.container = this;
-    iter.position = min_node;
-    
-    return iter;
-}
+//TreeIterator BinarySearchTree::begin()
+//{
+//    TreeIterator iter;
+//    TreeNode* min_node = findmin(root);
+//
+//    iter.container = this;
+//    iter.position = min_node;
+//
+//    return iter;
+//}
+//
+//TreeIterator BinarySearchTree::end()
+//{
+//    TreeIterator iter;
+//    TreeNode* max_node = findmax(root);
+//
+//    iter.container = this;
+//    iter.position = max_node;
+//
+//    return iter;
+//}
 
-TreeIterator BinarySearchTree::end()
-{
-    TreeIterator iter;
-    TreeNode* max_node = findmax(root);
-    
-    iter.container = this;
-    iter.position = max_node;
-    
-    return iter;
-}
-
-TreeNode* BinarySearchTree::findmax(TreeNode* current_node)
+TreeNode* BinarySearchTree::findmax(TreeNode* current_node) const
 {
     TreeNode* left_node = current_node -> left; // the node with the smallest value should be the left-most node
     
@@ -127,7 +127,7 @@ TreeNode* BinarySearchTree::findmax(TreeNode* current_node)
     }
 }
 
-TreeNode* BinarySearchTree::findmin(TreeNode* current_node)
+TreeNode* BinarySearchTree::findmin(TreeNode* current_node) const
 {
     TreeNode* right_node = current_node -> right; // the node with the greatest value should be the right-most node
     if (right_node != nullptr)  // if the next right node exists, continues recursively going down the right side of the tree
@@ -139,3 +139,8 @@ TreeNode* BinarySearchTree::findmin(TreeNode* current_node)
         return current_node;
     }
 }
+TreeNode* BinarySearchTree::find(int searched_value)
+{
+    return (root ->find_helper(searched_value));
+}
+

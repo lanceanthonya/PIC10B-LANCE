@@ -35,14 +35,16 @@ public:
     
     void print_decreasing() const; 
     
-    TreeIterator begin();
+    //TreeIterator begin();
 
-    TreeIterator end();
+    //TreeIterator end();
 
-    TreeNode* findmax(TreeNode* current_node);
+    TreeNode* findmax(TreeNode* current_node) const;
     
-    TreeNode* findmin(TreeNode* current_node);
-
+    TreeNode* findmin(TreeNode* current_node) const;
+    
+    TreeNode* find(int searched_value);
+    
     
 private:
     

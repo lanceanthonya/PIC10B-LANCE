@@ -54,6 +54,21 @@ public:
     */
     bool insert_helper(int new_num);
     
+    /**
+     Helper function for removing a node from the tree.
+     */
+    bool erase_helper (int removed_num);
+    
+    /**
+     Helper function for changing either the parent's left or right node, based on the child passed, with the second node that gets promoted up the tree as a result. This method sould only be used on a given parent node
+     
+     @param child_node  a child node to be replaced, based on the second arg
+     @param replacement_node a node that replaces the child node
+     */
+    void change_child (TreeNode* child_node, TreeNode* replacement_node);
+    
+    TreeNode* find_helper(int searched_value);
+    
 private:
     
     friend class BinarySearchTree;
@@ -62,7 +77,7 @@ private:
     int val;
     TreeNode* right;
     TreeNode* left;
-    TreeNode* daddy; // pointer to the parent node of a given node. Should be nullptr for the root
+    TreeNode* parent; // pointer to the parent node of a given node. Should be nullptr for the root
     
 };
 
